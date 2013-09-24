@@ -62,9 +62,11 @@ h3 a:active {
 }
 
 .details {
-    margin: 3em 0;
+    margin: 0 0;
     margin-bottom: 2em;
     text-align: center;
+	float: right;
+	width: 60%;
 }
 
 .detail {
@@ -99,29 +101,26 @@ a.twitter {
 
 .contact {
     overflow: hidden;
+	float: left;
+	width: 40%;
 }
 
 .contact p {
-    font-size: .9em;
+    font-size: .8em;
     line-height: 1.25em;
 }
 
 .jlongster, .codethug {
-    width: 50%;
     padding: 0 1em;
 }
 
-.jlongster {
-    float: left;
-}
-
-.codethug {
-    float: right;
-}
-
-.contact img {
-    display: block;
+.contact .bio {
     margin: 1.5em auto;
+
+}
+
+.contact .photo {
+    display: block;
     
 }
 
