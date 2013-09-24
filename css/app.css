@@ -1,0 +1,134 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    color: #031634;
+    margin: 0;
+    padding: 0;
+    /* background: url(img/subtlenet2@2x.png); */
+    /* background-size: 60px 60px; */
+    background-color: #F0F0D8;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {
+    color: #604848;
+}
+
+h2,
+h3,
+h3 a,
+h3 a:visited,
+h3 a:active {
+    color: #607848;
+}
+
+.content {
+    width: 70%;
+    min-height: 100%;
+    margin: 0 auto;
+
+    padding: 0 1.5em;
+}
+
+.logo {
+    position: relative;
+    width: 425px;
+    margin: 3em auto;
+}
+
+.logo canvas {
+    position: absolute;
+    top: -7px;
+    left: 275px;
+}
+
+.logo img {
+    /* scale high-res image down for retina */
+    width: 275px;
+}
+
+.details {
+    margin: 3em 0;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.detail {
+    margin: .25em 0;
+    font-size: 1.25em;
+}
+
+.detail span,
+a,
+a:active,
+a:visited {
+    font-weight: bold;
+    color: #E5584D;
+}
+
+.subtext {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-size: .8em;
+    font-style: italic;
+}
+
+.follow {
+    font-weight: bold;
+    font-size: .9em;
+}
+
+a.twitter {
+    display: block;
+    margin-bottom: .25em;
+}
+
+.contact {
+    overflow: hidden;
+}
+
+.contact p {
+    font-size: .9em;
+    line-height: 1.25em;
+}
+
+.jlongster, .codethug {
+    width: 50%;
+    padding: 0 1em;
+}
+
+.jlongster {
+    float: left;
+}
+
+.codethug {
+    float: right;
+}
+
+.contact img {
+    display: block;
+    margin: 1.5em auto;
+    
+}
+
+.footnote {
+    margin: 3em 0;
+    margin-top: 5em;
+    font-size: .8em;
+    text-align: center;
+    font-style: italic;
+}
