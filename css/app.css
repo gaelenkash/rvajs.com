@@ -61,9 +61,31 @@ h3 a:active {
     width: 275px;
 }
 
-.details {
+.meeting {
     margin: 3em 0;
-    margin-bottom: 2em;
+    overflow: hidden;
+}
+
+.intro, .details {
+    width: 50%;
+}
+
+.intro {
+    float: left;
+}
+
+.intro p {
+    font-size: .85em;
+    line-height: 1.25em;
+}
+
+.intro h3 {
+    text-align: left;
+    margin-top: 0;
+}
+
+.details {
+    float: right;
     text-align: center;
 }
 
@@ -99,6 +121,7 @@ a.twitter {
 
 .contact {
     overflow: hidden;
+    clear: both;
 }
 
 .contact p {
