@@ -38,7 +38,6 @@ h3 a:active {
 }
 
 .content {
-    width: 70%;
     min-height: 100%;
     margin: 0 auto;
 
@@ -68,12 +67,34 @@ h3 a:active {
     overflow: hidden;
 }
 
-.intro, .details {
-    width: 50%;
+@media (min-width:800px) {
+	.content {
+		width: 70%;
+	}
+	.intro {
+		float: left;
+		width: 40%;
+	}
+	.details {
+		float: right;
+		width: 55%;
+	}
+	.jlongster, .codethug {
+		width: 50%;
+		padding: 0 1em;
+	}
+
+	.jlongster {
+		float: left;
+	}
+
+	.codethug {
+		float: right;
+	}
 }
 
-.intro {
-    float: left;
+.details {
+    text-align: center;
 }
 
 .intro p {
@@ -86,10 +107,6 @@ h3 a:active {
     margin-top: 0;
 }
 
-.details {
-    float: right;
-    text-align: center;
-}
 
 .detail {
     margin: .25em 0;
@@ -139,19 +156,6 @@ a.twitter {
 .contact p {
     font-size: .9em;
     line-height: 1.25em;
-}
-
-.jlongster, .codethug {
-    width: 50%;
-    padding: 0 1em;
-}
-
-.jlongster {
-    float: left;
-}
-
-.codethug {
-    float: right;
 }
 
 .contact img {
