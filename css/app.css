@@ -13,6 +13,7 @@ body {
     font-family: sans-serif;
     font-size: 1.5em;
     color: #031634;
+
     margin: 0;
     padding: 0;
     /* background: url(img/subtlenet2@2x.png); */
@@ -63,6 +64,7 @@ h3 a:active {
 
 .meeting {
     margin: 3em 0;
+    margin-bottom: 1em;
     overflow: hidden;
 }
 
@@ -102,16 +104,26 @@ a:visited {
     color: #E5584D;
 }
 
-.subtext {
+.detail a {
+    display: block;
+}
+
+.detail img {
+    margin-top: .5em;
+}
+
+p.subtext {
     margin-top: 1em;
     margin-bottom: 2em;
-    font-size: .8em;
+    font-size: .75em;
     font-style: italic;
+    text-align: center;
 }
 
 .follow {
     font-weight: bold;
     font-size: .9em;
+    text-align: center;
 }
 
 a.twitter {
