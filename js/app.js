@@ -104,8 +104,12 @@ for(var i=0; i<data.length; i++) {
 }
 
 document.body.addEventListener('mousemove', function(e) {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
     var rect = canvas.getBoundingClientRect();
-    var pos = [e.pageX - rect.left, e.pageY - rect.top];
+    var pos = [e.pageX - rect.left - scrollLeft,
+               e.pageY - rect.top - scrollTop];
 
     if(pos[0] < rect.width && pos[1] < rect.height) {
         mousePos = pos;
