@@ -21,6 +21,10 @@ body {
     background-color: #F0F0D8;
 }
 
+img {
+	border: none;
+}
+
 h1, h2, h3 {
     text-align: center;
 }
