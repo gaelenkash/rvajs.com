@@ -99,6 +99,15 @@ h3 a:active {
 
 .details ,.sponsors {
     text-align: center;
+    padding-bottom: 1em;
+}
+
+.sponsors {
+    clear: both;
+}
+
+.sponsorLogos{
+    height: 82px;
 }
 
 .intro p {
