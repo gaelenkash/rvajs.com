@@ -132,7 +132,7 @@ function heartbeat() {
         p.update(.016);
     }
 
-    requestAnimFrame(heartbeat);
+  requestAnimFrame(heartbeat);
 }
 
 var last = Date.now();

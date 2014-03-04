@@ -11,26 +11,21 @@ html, body {
 
 body {
     font-family: sans-serif;
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #031634;
+    background-color: #fcfcfc;
 
     margin: 0;
     padding: 0;
-    /* background: url(img/subtlenet2@2x.png); */
-    /* background-size: 60px 60px; */
-    background-color: #F0F0D8;
 }
 
 img {
 	border: none;
 }
 
-h1, h2, h3 {
-    text-align: center;
-}
-
 h1 {
-    color: #604848;
+    color: #CE534D;
+    font-family: Palatino,Georgia,serif;
 }
 
 h2,
@@ -38,14 +33,29 @@ h3,
 h3 a,
 h3 a:visited,
 h3 a:active {
-    color: #607848;
+
 }
 
-.content {
-    min-height: 100%;
-    margin: 0 auto;
+.meeting h1 {
+    color: #DED4B9;
+}
 
-    padding: 0 1.5em;
+a,
+a:active,
+a:visited {
+    color: #64B6B1;
+    text-decoration: none;
+}
+
+/* .meeting a, */
+/* .meeting a:active, */
+/* .meeting a:visited { */
+/*     color: #A1C1BE; */
+/* } */
+
+body > section, .inner {
+    padding: 1.5em;
+    overflow: hidden;
 }
 
 .logo {
@@ -66,23 +76,41 @@ h3 a:active {
 }
 
 .meeting {
-    margin: 3em 0;
-    margin-bottom: 1em;
     overflow: hidden;
+    background-color: #46433A;
+    color: white;
+}
+
+.meeting .info {
+    margin: 1em 0;
+    font-size: 1.2em;
+}
+
+.meeting .info h3 {
+    margin-bottom: 0;
 }
 
 @media (min-width:800px) {
-	.content {
-		width: 70%;
+    body > section, .inner {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+	section.meeting {
+        width: auto;
+        padding: 0;
 	}
-	.intro {
-		float: left;
-		width: 40%;
-	}
-	.details {
-		float: right;
-		width: 55%;
-	}
+
+    section.details .left, section.details .right {
+        width: 50%;
+        float: left;
+    }
+
+    section.details .right {
+        text-align: right;
+    }
+
 	.jlongster, .codethug {
 		width: 50%;
 		padding: 0 1em;
@@ -97,57 +125,24 @@ h3 a:active {
 	}
 }
 
-.details ,.sponsors {
+.sponsors .links {
     text-align: center;
-    padding-bottom: 1em;
 }
 
-.sponsors {
-    clear: both;
+.sponsors a {
+    margin: 0 1em;
 }
 
-.sponsorLogos{
-    height: 82px;
-}
-
-.intro p {
-    font-size: .85em;
-    line-height: 1.25em;
-}
-
-.intro h3 {
-    text-align: left;
+.meeting h3 {
     margin-top: 0;
 }
 
-
-.detail {
-    margin: .25em 0;
-    font-size: 1.25em;
-}
-
-.detail span,
-a,
-a:active,
-a:visited {
+section.details .name {
     font-weight: bold;
-    color: #E5584D;
 }
 
-.detail a {
-    display: block;
-}
-
-.detail img {
-    margin-top: .5em;
-}
-
-p.subtext {
+.map img {
     margin-top: 1em;
-    margin-bottom: 2em;
-    font-size: .75em;
-    font-style: italic;
-    text-align: center;
 }
 
 .follow {
