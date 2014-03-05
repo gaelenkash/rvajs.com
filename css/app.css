@@ -23,20 +23,14 @@ img {
 	border: none;
 }
 
-h1 {
+h1,
+h2 {
     color: #CE534D;
     font-family: Palatino,Georgia,serif;
 }
 
-h2,
-h3,
-h3 a,
-h3 a:visited,
-h3 a:active {
-
-}
-
-.meeting h1 {
+.meeting h1,
+.meeting h2 {
     color: #DED4B9;
 }
 
@@ -90,6 +84,22 @@ body > section, .inner {
     margin-bottom: 0;
 }
 
+section.prev-meetings {
+    background-color: #f9f9f9;
+}
+
+section.prev-meetings ul li {
+    margin: 1em 0;
+}
+
+section.prev-meetings ul ul {
+    margin: 1em 0;
+}
+
+section.prev-meetings ul ul li {
+    margin: 0;
+}
+
 @media (min-width:800px) {
     body > section, .inner {
         width: 70%;
@@ -97,7 +107,7 @@ body > section, .inner {
         margin-right: auto;
     }
 
-	section.meeting {
+	section.meeting, section.prev-meetings {
         width: auto;
         padding: 0;
 	}
