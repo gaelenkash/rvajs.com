@@ -75,29 +75,33 @@ body > section, .inner {
     color: white;
 }
 
-.meeting .info {
+.meeting .info, .prev-meetings .info, .upcoming-meetings .info{
     margin: 1em 0;
     font-size: 1.2em;
 }
 
-.meeting .info h3 {
+.meeting .info h3, .prev-meetings .info h3, .upcoming-meetings .info h3 {
     margin-bottom: 0;
 }
 
-section.prev-meetings {
+section.prev-meetings,section.upcoming-meetings {
     background-color: #f9f9f9;
 }
 
-section.prev-meetings ul li {
+section.prev-meetings ul li,section.upcoming-meetings ul li {
     margin: 1em 0;
 }
 
-section.prev-meetings ul ul {
+section.prev-meetings ul ul,section.upcoming-meetings ul ul {
     margin: 1em 0;
 }
 
-section.prev-meetings ul ul li {
+section.prev-meetings ul ul li,section.upcoming-meetings ul ul li {
     margin: 0;
+}
+
+.meetingDetails {
+	margin-bottom: 4em;
 }
 
 @media (min-width:800px) {
@@ -107,7 +111,7 @@ section.prev-meetings ul ul li {
         margin-right: auto;
     }
 
-	section.meeting, section.prev-meetings {
+	section.meeting, section.prev-meetings, section.upcoming-meetings {
         width: auto;
         padding: 0;
 	}
