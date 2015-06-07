@@ -52,6 +52,17 @@ body > section, .inner {
     overflow: hidden;
 }
 
+.nav {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline;
+    margin: 0 20px;
+}
+
 .logo {
     position: relative;
     width: 425px;
@@ -69,7 +80,7 @@ body > section, .inner {
     width: 275px;
 }
 
-.meeting {
+.meeting, .nav {
     overflow: hidden;
     background-color: #46433A;
     color: white;
@@ -183,7 +194,7 @@ a.twitter {
 .contact img {
     display: block;
     margin: 1.5em auto;
-    
+
 }
 
 .footnote {
