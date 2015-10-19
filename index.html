@@ -32,24 +32,15 @@
     </section>
 
     <section class="meeting">
-      <div class="inner">
+      <div class="inner" data-bind="with:nextMeetup">
         <h1>Next Meeting</h1>
 
         <div class="meetingDetails">
           <div class="info">
-          <h3>Lightning Talks</h3>
-          You! <br/>
-          August 4, 2015
+            <h3 data-bind="text:name"></h3>
+            <span data-bind="text:detailedDateTime"></span>
           </div>
-          <p>
-            What amazing and exciting ideas, tools, or projects have you been working on lately related
-            to javascript?  Come and tell us.  This meeting is designed for you to give a short talk on a topic
-            of your choice.
-          </p>
-          <p>
-            Each talk will be 5-10 minutes long.  If you want to give a talk, please add a comment
-            to the <a href="http://www.meetup.com/rva-js/events/222345769/">meeting at meetup.com</a>.
-          </p>
+          <div data-bind="html:description"></div>
 
         </div>
 
@@ -57,13 +48,15 @@
           Dinner will be provided.
         </p>
         <p>
-          Please <a href="http://www.meetup.com/rva-js/events/222345769/">RSVP on Meetup</a>.
+          Please <a data-bind="attr: {href: event_url}">RSVP on Meetup</a>.
           Follow us on <a href="https://twitter.com/rvajs">twitter</a>
         </p>
 
         <p class="follow">
           <a href="https://twitter.com/rvajs" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @rvajs</a>
+<!--
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+-->
         </p>
       </div>
     </section>
@@ -77,7 +70,8 @@
         <div class="map">
           <p>
             <a href="https://www.google.com/maps/place/1657+W+Broad+St+Richmond+VA">
-              1657 West Broad Street, Richmond, VA 23220
+              <div>1657 West Broad Street</div>
+              <div>Richmond, VA 23220</div>
               <img src="img/map-804rva.png" />
             </a>
           </p>
@@ -92,22 +86,17 @@
 	  <div class="inner">
 		<h1>Upcoming Meetings</h1>
 
-      <div class="meetingDetails">
-        <div class="info">
-        <h3>Server Side JavaScript in Azure Mobile Services</h3>
-        Kevin Hazzard <a href="http://twitter.com/kevinhazzard">@kevinhazzard</a> <br/>
-        September 8, 2015
-        </div>
-        <p>
-          Just a couple of years ago, if you had asked most developers which cloud computing platform would have a large-scale, successful server side JavaScript implementation, few would have chosen Microsoft. Yet, here we are. Microsoft's Azure Mobile Services product stands as one of the very best cloud-based Node.js powered products out there. Sometimes called a Mobile Backend As A Service (MBAAS), Azure Mobile Services gives you just about everything you need to connect any kind of mobile device to your infrastructure. And with the power of JavaScript in hand, the extensibility options are seemingly limitless. In this highly-interactive, code-focused session, we'll dive deep into the ways that JavaScript can be used on the server side to extend Azure Mobile Services in a variety of useful ways including logging, authorization, redirection, messaging, push notifications and more.
-        </p>
-        <p>
-          Kevin Hazzard is a Partner at <a href="http://www.linchpinpeople.com/">Linchpin People LLC</a>, leaders in the data integration
-          and wellness space. He's a long-time Microsoft MVP and the author of a book entitled <a href="http://www.amazon.com/Metaprogramming-NET-Kevin-Hazzard/dp/1617290262">Metaprogramming in .NET</a>.
-          Kevin also serves as an elected member of his local School Board and dedicates most of his non-professional time promoting public education.
-        </p>
-      </div>
+      <!-- ko foreach: subsequentMeetups -->
 
+        <div class="meetingDetails">
+          <div class="info">
+            <h3 data-bind="text:name"></h3>
+            <span data-bind="text:detailedDateTime"></span>
+          </div>
+          <div data-bind="html:description"></div>
+        </div>
+
+      <!-- /ko -->
 	  </div>
 	</section>
 
@@ -157,8 +146,8 @@
 
     </section>
 
-    <p class="footnote">Hope to see you there!</p>
-
+    <script data-main="js\app-Index" src="js/lib/require-2.1.20.min.js"></script>
+<!--
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -169,6 +158,6 @@
       ga('send', 'pageview');
 
     </script>
-    <script src="js/app.js"></script>
+-->
   </body>
 </html>
