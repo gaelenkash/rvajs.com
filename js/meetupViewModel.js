@@ -26,7 +26,7 @@ define(function (require) {
         meetup = meetup || {};
 
         var meetupTime = moment(meetup.time);
-        meetup.detailedDateTime = meetupTime.format('dddd, MMMM D [at] H:mma');
+        meetup.detailedDateTime = meetupTime.format('dddd, MMMM D [at] h:mma');
         meetup.detailedDate = meetupTime.format('MMMM D, YYYY');
 
         return meetup;
