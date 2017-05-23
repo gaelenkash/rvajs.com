@@ -136,16 +136,15 @@ section.prev-meetings ul ul li,section.upcoming-meetings ul ul li {
         text-align: right;
     }
 
-	.jlongster, .codethug {
+	.jlongster, .codethug, .gkash {
 		width: 50%;
 		padding: 0 1em;
 	}
+    .gkash {
+        float: left;
+    }
 
 	.jlongster {
-		float: left;
-	}
-
-	.codethug {
 		float: right;
 	}
 }
@@ -156,6 +155,10 @@ section.prev-meetings ul ul li,section.upcoming-meetings ul ul li {
 
 .sponsors a {
     margin: 0 1em;
+}
+
+.sponsors a .capitalone-logo {
+    width: 150px;
 }
 
 .meeting h3 {
