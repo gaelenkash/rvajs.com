@@ -225,3 +225,11 @@ a.twitter {
     width: 100%;
     height: 100%;
 }
+
+/* Announcements
+*/
+.announcement.conference {
+    padding: 0.2em;
+    text-align: center;
+    background-color: #607848;
+}
