@@ -36,7 +36,7 @@ define(function (require) {
             success: function (results) {
                 console.log("Archived Meetups", results.results);
                 vm.archivedMeetups(
-                  _.reject(_.map(results.results, convertMeetup), function(m) { return m.year > 2100 });
+                  _.reject(_.map(results.results, convertMeetup), function(m) { return m.year > 2100 })
                 );
                 console.log("Archived Meetups (converted)", vm.archivedMeetups());
             }
