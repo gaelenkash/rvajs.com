@@ -34,9 +34,9 @@ define(function (require) {
             jsonp: "callback",
             dataType: "jsonp",
             success: function (results) {
-                console.log("Archived Meetups", results.results);
+                console.log("Archived Meetups", results.data);
                 vm.archivedMeetups(
-                  _.reject(_.map(results.results, convertMeetup), function(m) { return m.year > 2100 })
+                  _.reject(_.map(results.data, convertMeetup), function(m) { return m.year > 2100 })
                 );
                 console.log("Archived Meetups (converted)", vm.archivedMeetups());
             }
@@ -49,19 +49,19 @@ define(function (require) {
               jsonp: "callback",
               dataType: "jsonp",
               success: function (results) {
-                  console.log("Upcoming Meetups", results.results);
+                  console.log("Upcoming Meetups", results.data);
                   // Only the first meetup
-                  if (results.results.length) {
-                    var next = convertMeetup(results.results[0]);
+                  if (results.data.length) {
+                    var next = convertMeetup(results.data[0]);
                     vm.nextMeetup(next);
                   } else {
                     vm.nextMeetup({});
                   }
                   // Remove the first meetup from the list
-                  results.results.shift();
+                  results.data.shift();
                   vm.subsequentMeetups(
                     _.map(
-                        _.reject(results.results, function(m) { return m.year > 2100 || (m.name === "TBA" && m.description === "<p>TBA</p>"); }),
+                        _.reject(results.data, function(m) { return m.year > 2100 || (m.name === "TBA" && m.description === "<p>TBA</p>"); }),
                       convertMeetup)
                   );
                   console.log("Next Meetup (converted)", vm.nextMeetup());
