@@ -11,15 +11,9 @@ define(function (require) {
       vm.subsequentMeetups = ko.observableArray();
       vm.archivedMeetups = ko.observableArray();
 
-      // Signed URL documentation: http://www.meetup.com/meetup_api/auth/#keysign
-      // Events API Endpoint: http://www.meetup.com/meetup_api/docs/2/events/
-      var upcomingMeetupsUrl = "https://api.meetup.com/2/events?" +
-          "offset=0&format=json&limited_events=False&group_urlname=rva-js&photo-host=public&" +
-          "page=20&fields=&order=time&desc=false&status=upcoming&sig_id=97460602&sig=2cd63328f21046e47b67c0ab687418f4ad60710a";
-
-      var archivedMeetupsUrl = "https://api.meetup.com/2/events?" +
-          "offset=0&format=json&limited_events=False&group_urlname=rva-js&photo-host=public&" +
-          "page=500&fields=&order=time&status=past&desc=false&sig_id=97460602&sig=a2a2077d5e63c3e77d16a5e08429a440b32241e2";
+      // Events API Documentation: https://www.meetup.com/meetup_api/docs/:urlname/events/#list
+      var upcomingMeetupsUrl = "https://api.meetup.com/rva-js/events?&sign=true&photo-host=public&page=20&status=upcoming";
+      var archivedMeetupsUrl = "https://api.meetup.com/rva-js/events?&sign=true&photo-host=public&page=500&desc=true&status=past";
 
 
       function convertMeetup(meetup) {
