@@ -22,7 +22,9 @@ define(function (require) {
         var meetupTime = moment(meetup.time);
         meetup.detailedDateTime = meetupTime.format('dddd, MMMM D [at] h:mma');
         meetup.detailedDate = meetupTime.format('MMMM D, YYYY');
-
+        meetup.event_url = meetup.link;
+        meetup.year = meetupTime.year();
+        
         return meetup;
       };
 
@@ -34,7 +36,7 @@ define(function (require) {
             success: function (results) {
                 console.log("Archived Meetups", results.results);
                 vm.archivedMeetups(
-                  _.map(results.results, convertMeetup)
+                  _.reject(_.map(results.results, convertMeetup), function(m) { return m.year > 2100 });
                 );
                 console.log("Archived Meetups (converted)", vm.archivedMeetups());
             }
@@ -59,7 +61,7 @@ define(function (require) {
                   results.results.shift();
                   vm.subsequentMeetups(
                     _.map(
-                        _.reject(results.results, function(m) { return m.name === "TBA" && m.description === "<p>TBA</p>"; }),
+                        _.reject(results.results, function(m) { return m.year > 2100 || (m.name === "TBA" && m.description === "<p>TBA</p>"); }),
                       convertMeetup)
                   );
                   console.log("Next Meetup (converted)", vm.nextMeetup());
